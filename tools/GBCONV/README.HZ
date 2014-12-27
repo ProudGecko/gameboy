@@ -1,0 +1,70 @@
+                       :_____
+:_____ _____:""|______.|    /__ _____ __.
+|  .  Y   / .  |  ____|!   /.  Y  .  Y  |__
+|  !  !  /\ !  |___ /  . _/ l  |  i  |  l  |
+l_____l____\___i|   \__|  \____|_____!_____|
+----------------l____\-l___\----------------
+
+Proudly presents GBCONV.EXE a gfx converting utility
+that converts PCX files to data that you can use when
+coding the GameBoy.
+
+I realy hate writing readmes so this is just something I put together
+in 3 mins or so...
+
+
+First of all. If you're into GB coding (which I assume) be
+sure to check out the gb.asm file which contains some of my
+standard routines I use when coding the GB.
+
+
+How to use it:
+First you need a picture. A PCX 320x200x256 will do (hmm, that's the
+only format that's works by the way).
+One important thing is how you use the palette. The converter
+only converts the first 4 colors, pixels with other colors are ignored.
+
+The easiest way to get a correct picture is to take the "useme.pcx"
+that's included and modify it just DON'T change any color or use
+any other color than them first 4 ones..
+
+So, when you file is OK and you're ready to convert it to some
+strange binary format that your GB understands just type
+c:\>gbconv infile.pcx outfile.bin
+
+OK, so now you have some gfx data ready to feed your gb with...
+If your assembler supports binary includes then just include the
+file in you source code and use it. If your asm. doesn't then
+you must convert it to .db's.
+
+So check out the SAMPLE dir it contains the gbfont.pcx, gbfont.bin and
+gbfont.asm. The .asm is the binary .bin file converted to
+.db's with my own bin2db converter (sorry, its to buggy to give away).
+
+Hmm, well that's about it.. If you have any problems just
+email me herozero@publ.ica.se and Ill help you out.
+
+files included...
+C:.
+³   GBCONV.EXE		The executable converter
+³   USEME.PCX		100% OK .pcx file for you to modify
+³   README.HZ		This file
+³
+ÀÄÄÄSAMPLE
+        ASM.BAT		.bat file to asm the sample with tasm
+        GB.ASM		Collection of some great GB routines
+			written by me. Feel free to use them
+			but please gimme credit.
+        GBFONT.ASM	The converted and bin2db'd picture
+        GBFONT.BIN	The output from the converter.
+        GBFONT.PCX	The picture (just a simple font)
+        TASM69.TAB	The .tab file for tasm by Jeff F.
+        CRC.EXE		A small gb header fixer also by Jeff
+        SAMPLE.ASM	The source code for the sample
+			just puts the picture and some text on the screen
+        SAMPLE.BOY	Assembled ready to run sample
+
+Greetings to:
+RiP, Mumbly and CyberGod
+A complete greetings list would just be boring.
+

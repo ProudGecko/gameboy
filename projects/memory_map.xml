@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
+  <gnm:Version Epoch="1" Major="12" Minor="9" Full="1.12.9"/>
+  <gnm:Attributes>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_vertical_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_notebook_tabs</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::do_auto_completion</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::is_protected</gnm:name>
+      <gnm:value>FALSE</gnm:value>
+    </gnm:Attribute>
+  </gnm:Attributes>
+  <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
+    <office:meta>
+      <dc:date>2014-12-15T03:40:00Z</dc:date>
+      <meta:creation-date>2014-12-10T17:58:30Z</meta:creation-date>
+    </office:meta>
+  </office:document-meta>
+  <gnm:Calculation ManualRecalc="0" EnableIteration="1" MaxIterations="100" IterationTolerance="0.001" FloatRadix="2" FloatDigits="53"/>
+  <gnm:SheetNameIndex>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Summary</gnm:SheetName>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">ROM</gnm:SheetName>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">VRAM</gnm:SheetName>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">OAM</gnm:SheetName>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Internal RAM</gnm:SheetName>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Peripherals</gnm:SheetName>
+  </gnm:SheetNameIndex>
+  <gnm:Geometry Width="935" Height="847"/>
+  <gnm:Sheets>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Summary</gnm:Name>
+      <gnm:MaxCol>3</gnm:MaxCol>
+      <gnm:MaxRow>6</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;Summary&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="0" startRow="1" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48">
+        <gnm:ColInfo No="0" Unit="163.5"/>
+        <gnm:ColInfo No="3" Unit="94.5" HardSize="1"/>
+      </gnm:Cols>
+      <gnm:Rows DefaultSizePts="12.75">
+        <gnm:RowInfo No="0" Unit="13.5" Count="7"/>
+      </gnm:Rows>
+      <gnm:Selections CursorCol="6" CursorRow="18">
+        <gnm:Selection startCol="6" startRow="18" endCol="6" endRow="18"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="0" ValueType="60">Segment</gnm:Cell>
+        <gnm:Cell Row="0" Col="1" ValueType="60">Start</gnm:Cell>
+        <gnm:Cell Row="0" Col="2" ValueType="60">End</gnm:Cell>
+        <gnm:Cell Row="0" Col="3" ValueType="60">Length</gnm:Cell>
+        <gnm:Cell Row="1" Col="0" ValueType="60">ROM</gnm:Cell>
+        <gnm:Cell Row="1" Col="1" ValueType="60">0x0000</gnm:Cell>
+        <gnm:Cell Row="1" Col="2" ValueType="60">0x7FFF</gnm:Cell>
+        <gnm:Cell Row="1" Col="3" ExprID="1">=hex2dec(C2)-hex2dec(B2)+1</gnm:Cell>
+        <gnm:Cell Row="2" Col="0" ValueType="60">Video RAM</gnm:Cell>
+        <gnm:Cell Row="2" Col="1" ValueType="60">0x8000</gnm:Cell>
+        <gnm:Cell Row="2" Col="2" ValueType="60">0x9FFF</gnm:Cell>
+        <gnm:Cell Row="2" Col="3" ExprID="1"/>
+        <gnm:Cell Row="3" Col="0" ValueType="60">Internal RAM</gnm:Cell>
+        <gnm:Cell Row="3" Col="1" ValueType="60">0xC000</gnm:Cell>
+        <gnm:Cell Row="3" Col="2" ValueType="60">0xDFFF</gnm:Cell>
+        <gnm:Cell Row="3" Col="3" ExprID="1"/>
+        <gnm:Cell Row="4" Col="0" ValueType="60">Object Attribute Memory (OAM)</gnm:Cell>
+        <gnm:Cell Row="4" Col="1" ValueType="60">0xFE00</gnm:Cell>
+        <gnm:Cell Row="4" Col="2" ValueType="60">0xFE9F</gnm:Cell>
+        <gnm:Cell Row="4" Col="3" ExprID="1"/>
+        <gnm:Cell Row="5" Col="0" ValueType="60">Peripherals</gnm:Cell>
+        <gnm:Cell Row="5" Col="1" ValueType="60">0xFF00</gnm:Cell>
+        <gnm:Cell Row="5" Col="2" ValueType="60">0xFF7F</gnm:Cell>
+        <gnm:Cell Row="5" Col="3" ExprID="1"/>
+        <gnm:Cell Row="6" Col="0" ValueType="60">Stack</gnm:Cell>
+        <gnm:Cell Row="6" Col="1" ValueType="60">0xFF80</gnm:Cell>
+        <gnm:Cell Row="6" Col="2" ValueType="60">0xFFFE</gnm:Cell>
+        <gnm:Cell Row="6" Col="3" ExprID="1"/>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>ROM</gnm:Name>
+      <gnm:MaxCol>4</gnm:MaxCol>
+      <gnm:MaxRow>30</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;ROM&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="4" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="0" startRow="1" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="5" startRow="0" endCol="255" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48">
+        <gnm:ColInfo No="0" Unit="117.8"/>
+        <gnm:ColInfo No="3" Unit="42.75"/>
+        <gnm:ColInfo No="4" Unit="444"/>
+      </gnm:Cols>
+      <gnm:Rows DefaultSizePts="12.75">
+        <gnm:RowInfo No="0" Unit="13.5" Count="25"/>
+      </gnm:Rows>
+      <gnm:Selections CursorCol="3" CursorRow="1">
+        <gnm:Selection startCol="3" startRow="1" endCol="3" endRow="1"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="0" ValueType="60">Section</gnm:Cell>
+        <gnm:Cell Row="0" Col="1" ValueType="60">Start</gnm:Cell>
+        <gnm:Cell Row="0" Col="2" ValueType="60">End</gnm:Cell>
+        <gnm:Cell Row="0" Col="3" ValueType="60">Length</gnm:Cell>
+        <gnm:Cell Row="0" Col="4" ValueType="60">Notes</gnm:Cell>
+        <gnm:Cell Row="1" Col="0" ValueType="60">RST Handlers</gnm:Cell>
+        <gnm:Cell Row="1" Col="1" ValueType="60">0x0000</gnm:Cell>
+        <gnm:Cell Row="1" Col="2" ValueType="60">0x003F</gnm:Cell>
+        <gnm:Cell Row="1" Col="3" ExprID="1"/>
+        <gnm:Cell Row="1" Col="4" ValueType="60">There are 8 RST handlers, each 8-bytes</gnm:Cell>
+        <gnm:Cell Row="3" Col="0" ValueType="60">Interrupt Handlers</gnm:Cell>
+        <gnm:Cell Row="3" Col="4" ValueType="60">There are 5 Interrupt handlers, each 8-bytes.  Generally only useful for jumping elsewhere</gnm:Cell>
+        <gnm:Cell Row="4" Col="0" ValueType="60">ISR: Vblank</gnm:Cell>
+        <gnm:Cell Row="4" Col="1" ValueType="60">0x0040</gnm:Cell>
+        <gnm:Cell Row="4" Col="2" ValueType="60">0x0047</gnm:Cell>
+        <gnm:Cell Row="4" Col="3" ExprID="1"/>
+        <gnm:Cell Row="5" Col="0" ValueType="60">ISR: LCD Status</gnm:Cell>
+        <gnm:Cell Row="5" Col="1" ValueType="60">0x0048</gnm:Cell>
+        <gnm:Cell Row="5" Col="2" ValueType="60">0x004F</gnm:Cell>
+        <gnm:Cell Row="5" Col="3" ExprID="1"/>
+        <gnm:Cell Row="6" Col="0" ValueType="60">ISR: Timer</gnm:Cell>
+        <gnm:Cell Row="6" Col="1" ValueType="60">0x0050</gnm:Cell>
+        <gnm:Cell Row="6" Col="2" ValueType="60">0x0057</gnm:Cell>
+        <gnm:Cell Row="6" Col="3" ExprID="1"/>
+        <gnm:Cell Row="7" Col="0" ValueType="60">ISR: Serial</gnm:Cell>
+        <gnm:Cell Row="7" Col="1" ValueType="60">0x0058</gnm:Cell>
+        <gnm:Cell Row="7" Col="2" ValueType="60">0x005F</gnm:Cell>
+        <gnm:Cell Row="7" Col="3" ExprID="1"/>
+        <gnm:Cell Row="8" Col="0" ValueType="60">ISR: Joypad</gnm:Cell>
+        <gnm:Cell Row="8" Col="1" ValueType="60">0x0060</gnm:Cell>
+        <gnm:Cell Row="8" Col="2" ValueType="60">0x0067</gnm:Cell>
+        <gnm:Cell Row="8" Col="3" ExprID="1"/>
+        <gnm:Cell Row="10" Col="0" ValueType="60">Unused</gnm:Cell>
+        <gnm:Cell Row="10" Col="1" ValueType="60">0x0068</gnm:Cell>
+        <gnm:Cell Row="10" Col="2" ValueType="60">0x00FF</gnm:Cell>
+        <gnm:Cell Row="10" Col="3" ExprID="1"/>
+        <gnm:Cell Row="12" Col="0" ValueType="60">Entry point</gnm:Cell>
+        <gnm:Cell Row="12" Col="1" ValueType="60">0x0100</gnm:Cell>
+        <gnm:Cell Row="12" Col="2" ValueType="60">0x0103</gnm:Cell>
+        <gnm:Cell Row="12" Col="3" ExprID="1"/>
+        <gnm:Cell Row="12" Col="4" ValueType="60">Only useful for jumping elsewhere</gnm:Cell>
+        <gnm:Cell Row="14" Col="0" ValueType="60">Nintendo Logo</gnm:Cell>
+        <gnm:Cell Row="14" Col="1" ValueType="60">0x0104</gnm:Cell>
+        <gnm:Cell Row="14" Col="2" ValueType="60">0x0133</gnm:Cell>
+        <gnm:Cell Row="14" Col="3" ExprID="1"/>
+        <gnm:Cell Row="14" Col="4" ValueType="60">Must match internal ROM copy or else game won't boot</gnm:Cell>
+        <gnm:Cell Row="16" Col="0" ValueType="60">Title</gnm:Cell>
+        <gnm:Cell Row="16" Col="1" ValueType="60">0x0134</gnm:Cell>
+        <gnm:Cell Row="16" Col="2" ValueType="60">0x013E</gnm:Cell>
+        <gnm:Cell Row="16" Col="3" ExprID="1"/>
+        <gnm:Cell Row="16" Col="4" ValueType="60">The title in ALLCAPS, bad to the right with nulls</gnm:Cell>
+        <gnm:Cell Row="17" Col="0" ValueType="60">Mfr. Code</gnm:Cell>
+        <gnm:Cell Row="17" Col="1" ValueType="60">0x013F</gnm:Cell>
+        <gnm:Cell Row="17" Col="2" ValueType="60">0x0142</gnm:Cell>
+        <gnm:Cell Row="17" Col="3" ExprID="1"/>
+        <gnm:Cell Row="17" Col="4" ValueType="60">Gameboy Color Compatibility: Unsupported = 0x00, Compatible = 0x80, Exclusive = 0xC0</gnm:Cell>
+        <gnm:Cell Row="18" Col="0" ValueType="60">GBC Compatibility Flag</gnm:Cell>
+        <gnm:Cell Row="18" Col="1" ValueType="60">0x0143</gnm:Cell>
+        <gnm:Cell Row="18" Col="2" ValueType="60">0x0143</gnm:Cell>
+        <gnm:Cell Row="18" Col="3" ExprID="1"/>
+        <gnm:Cell Row="19" Col="0" ValueType="60">New Licensee Code</gnm:Cell>
+        <gnm:Cell Row="19" Col="1" ValueType="60">0x0144</gnm:Cell>
+        <gnm:Cell Row="19" Col="2" ValueType="60">0x0145</gnm:Cell>
+        <gnm:Cell Row="19" Col="3" ExprID="1"/>
+        <gnm:Cell Row="19" Col="4" ValueType="60">&quot;New&quot; Licensee Code, a two character name</gnm:Cell>
+        <gnm:Cell Row="20" Col="0" ValueType="60">SGB</gnm:Cell>
+        <gnm:Cell Row="20" Col="1" ValueType="60">0x0146</gnm:Cell>
+        <gnm:Cell Row="20" Col="2" ValueType="60">0x0146</gnm:Cell>
+        <gnm:Cell Row="20" Col="3" ExprID="1"/>
+        <gnm:Cell Row="20" Col="4" ValueType="60">Super Gameboy Compatibility: Unsupported = 0x00, Supported = 0x03</gnm:Cell>
+        <gnm:Cell Row="21" Col="0" ValueType="60">Cart Type</gnm:Cell>
+        <gnm:Cell Row="21" Col="1" ValueType="60">0x0147</gnm:Cell>
+        <gnm:Cell Row="21" Col="2" ValueType="60">0x0147</gnm:Cell>
+        <gnm:Cell Row="21" Col="3" ExprID="1"/>
+        <gnm:Cell Row="21" Col="4" ValueType="60">See enumerations</gnm:Cell>
+        <gnm:Cell Row="22" Col="0" ValueType="60">Cart ROM Size</gnm:Cell>
+        <gnm:Cell Row="22" Col="1" ValueType="60">0x0148</gnm:Cell>
+        <gnm:Cell Row="22" Col="2" ValueType="60">0x0148</gnm:Cell>
+        <gnm:Cell Row="22" Col="3" ExprID="1"/>
+        <gnm:Cell Row="22" Col="4" ValueType="60">See enumerations</gnm:Cell>
+        <gnm:Cell Row="23" Col="0" ValueType="60">Cart RAM Size</gnm:Cell>
+        <gnm:Cell Row="23" Col="1" ValueType="60">0x0149</gnm:Cell>
+        <gnm:Cell Row="23" Col="2" ValueType="60">0x0149</gnm:Cell>
+        <gnm:Cell Row="23" Col="3" ExprID="1"/>
+        <gnm:Cell Row="23" Col="4" ValueType="60">See enumerations</gnm:Cell>
+        <gnm:Cell Row="24" Col="0" ValueType="60">Destination Code</gnm:Cell>
+        <gnm:Cell Row="24" Col="1" ValueType="60">0x014A</gnm:Cell>
+        <gnm:Cell Row="24" Col="2" ValueType="60">0x014A</gnm:Cell>
+        <gnm:Cell Row="24" Col="3" ExprID="1"/>
+        <gnm:Cell Row="24" Col="4" ValueType="60">Japan = 0x00, International = 0x01</gnm:Cell>
+        <gnm:Cell Row="25" Col="0" ValueType="60">Old Licensee Code</gnm:Cell>
+        <gnm:Cell Row="25" Col="1" ValueType="60">0x014B</gnm:Cell>
+        <gnm:Cell Row="25" Col="2" ValueType="60">0x014B</gnm:Cell>
+        <gnm:Cell Row="25" Col="3" ExprID="1"/>
+        <gnm:Cell Row="25" Col="4" ValueType="60">0x33 indicates new licensee code used</gnm:Cell>
+        <gnm:Cell Row="26" Col="0" ValueType="60">Cart ROM Version</gnm:Cell>
+        <gnm:Cell Row="26" Col="1" ValueType="60">0x014C</gnm:Cell>
+        <gnm:Cell Row="26" Col="2" ValueType="60">0x014C</gnm:Cell>
+        <gnm:Cell Row="26" Col="3" ExprID="1"/>
+        <gnm:Cell Row="27" Col="0" ValueType="60">Header checksum</gnm:Cell>
+        <gnm:Cell Row="27" Col="1" ValueType="60">0x014D</gnm:Cell>
+        <gnm:Cell Row="27" Col="2" ValueType="60">0x014D</gnm:Cell>
+        <gnm:Cell Row="27" Col="3" ExprID="1"/>
+        <gnm:Cell Row="27" Col="4" ValueType="60">Use rgbfix or similar to patch this value</gnm:Cell>
+        <gnm:Cell Row="28" Col="0" ValueType="60">Global checksum</gnm:Cell>
+        <gnm:Cell Row="28" Col="1" ValueType="60">0x014E</gnm:Cell>
+        <gnm:Cell Row="28" Col="2" ValueType="60">0x014F</gnm:Cell>
+        <gnm:Cell Row="28" Col="3" ExprID="1"/>
+        <gnm:Cell Row="28" Col="4" ValueType="60">Use rgbfix or similar to patch this value</gnm:Cell>
+        <gnm:Cell Row="30" Col="0" ValueType="60">Start of Code</gnm:Cell>
+        <gnm:Cell Row="30" Col="1" ValueType="60">0x0150</gnm:Cell>
+        <gnm:Cell Row="30" Col="2" ValueType="60">0x7fff</gnm:Cell>
+        <gnm:Cell Row="30" Col="3" ExprID="1"/>
+        <gnm:Cell Row="30" Col="4" ValueType="60">Remainder of 32KB Bank 0 available for executable code</gnm:Cell>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>VRAM</gnm:Name>
+      <gnm:MaxCol>4</gnm:MaxCol>
+      <gnm:MaxRow>4</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;VRAM&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="4" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="0" startRow="1" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="5" startRow="0" endCol="255" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48">
+        <gnm:ColInfo No="0" Unit="107.2"/>
+      </gnm:Cols>
+      <gnm:Rows DefaultSizePts="12.75">
+        <gnm:RowInfo No="0" Unit="13.5" Count="5"/>
+      </gnm:Rows>
+      <gnm:Selections CursorCol="5" CursorRow="6">
+        <gnm:Selection startCol="5" startRow="6" endCol="5" endRow="6"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="0" ValueType="60">Section</gnm:Cell>
+        <gnm:Cell Row="0" Col="1" ValueType="60">Start</gnm:Cell>
+        <gnm:Cell Row="0" Col="2" ValueType="60">End</gnm:Cell>
+        <gnm:Cell Row="0" Col="3" ValueType="60">Length</gnm:Cell>
+        <gnm:Cell Row="0" Col="4" ValueType="60">Notes</gnm:Cell>
+        <gnm:Cell Row="1" Col="0" ValueType="60">Sprite/BG Tile Data</gnm:Cell>
+        <gnm:Cell Row="1" Col="1" ValueType="60">0x8000</gnm:Cell>
+        <gnm:Cell Row="1" Col="2" ValueType="60">0x8FFF</gnm:Cell>
+        <gnm:Cell Row="1" Col="3" ExprID="1"/>
+        <gnm:Cell Row="2" Col="0" ValueType="60">BG/Window Tile Data</gnm:Cell>
+        <gnm:Cell Row="2" Col="1" ValueType="60">0x8800</gnm:Cell>
+        <gnm:Cell Row="2" Col="2" ValueType="60">0x97FF</gnm:Cell>
+        <gnm:Cell Row="2" Col="3" ExprID="1"/>
+        <gnm:Cell Row="3" Col="0" ValueType="60">Background Map 1</gnm:Cell>
+        <gnm:Cell Row="3" Col="1" ValueType="60">0x9800</gnm:Cell>
+        <gnm:Cell Row="3" Col="2" ValueType="60">0x9BFF</gnm:Cell>
+        <gnm:Cell Row="3" Col="3" ExprID="1"/>
+        <gnm:Cell Row="4" Col="0" ValueType="60">Background Map 2</gnm:Cell>
+        <gnm:Cell Row="4" Col="1" ValueType="60">0x9C00</gnm:Cell>
+        <gnm:Cell Row="4" Col="2" ValueType="60">0x9FFF</gnm:Cell>
+        <gnm:Cell Row="4" Col="3" ExprID="1"/>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>OAM</gnm:Name>
+      <gnm:MaxCol>0</gnm:MaxCol>
+      <gnm:MaxRow>0</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;OAM&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48"/>
+      <gnm:Rows DefaultSizePts="12.75"/>
+      <gnm:Selections CursorCol="0" CursorRow="0">
+        <gnm:Selection startCol="0" startRow="0" endCol="0" endRow="0"/>
+      </gnm:Selections>
+      <gnm:Cells/>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Internal RAM</gnm:Name>
+      <gnm:MaxCol>0</gnm:MaxCol>
+      <gnm:MaxRow>0</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;Internal RAM&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48"/>
+      <gnm:Rows DefaultSizePts="12.75"/>
+      <gnm:Selections CursorCol="0" CursorRow="0">
+        <gnm:Selection startCol="0" startRow="0" endCol="0" endRow="0"/>
+      </gnm:Selections>
+      <gnm:Cells/>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Peripherals</gnm:Name>
+      <gnm:MaxCol>3</gnm:MaxCol>
+      <gnm:MaxRow>20</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;Peripherals&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="254" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="0" startRow="1" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="255" startRow="0" endCol="255" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48">
+        <gnm:ColInfo No="0" Unit="61.5"/>
+        <gnm:ColInfo No="1" Unit="58.5"/>
+        <gnm:ColInfo No="2" Unit="26.25"/>
+        <gnm:ColInfo No="3" Unit="287.2"/>
+      </gnm:Cols>
+      <gnm:Rows DefaultSizePts="12.75">
+        <gnm:RowInfo No="0" Unit="13.5" Count="21"/>
+      </gnm:Rows>
+      <gnm:Selections CursorCol="0" CursorRow="2">
+        <gnm:Selection startCol="0" startRow="2" endCol="0" endRow="2"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="0" ValueType="60">Register</gnm:Cell>
+        <gnm:Cell Row="0" Col="1" ValueType="60">Address</gnm:Cell>
+        <gnm:Cell Row="0" Col="2" ValueType="60">R/W</gnm:Cell>
+        <gnm:Cell Row="0" Col="3" ValueType="60">Notes</gnm:Cell>
+        <gnm:Cell Row="1" Col="0" ValueType="60">LCD Control</gnm:Cell>
+        <gnm:Cell Row="1" Col="1" ValueType="60">0xFF40</gnm:Cell>
+        <gnm:Cell Row="1" Col="2" ValueType="60">R/W</gnm:Cell>
+        <gnm:Cell Row="2" Col="1" ValueType="60">0xFF40.7</gnm:Cell>
+        <gnm:Cell Row="2" Col="3" ValueType="60">LCD Display Enable (0 = Off, 1 = On)</gnm:Cell>
+        <gnm:Cell Row="3" Col="1" ValueType="60">0xFF40.6</gnm:Cell>
+        <gnm:Cell Row="3" Col="3" ValueType="60">Window Tile Map Display Select (0 = 0x9800, 1 =0x9C00)</gnm:Cell>
+        <gnm:Cell Row="4" Col="1" ValueType="60">0xFF40.5</gnm:Cell>
+        <gnm:Cell Row="4" Col="3" ValueType="60">Window Display Enable (0 = Off, 1 = On)</gnm:Cell>
+        <gnm:Cell Row="5" Col="1" ValueType="60">0xFF40.4</gnm:Cell>
+        <gnm:Cell Row="5" Col="3" ValueType="60">BG &amp; Window Tile Data Select</gnm:Cell>
+        <gnm:Cell Row="6" Col="1" ValueType="60">0xFF40.3</gnm:Cell>
+        <gnm:Cell Row="7" Col="1" ValueType="60">0xFF40.2</gnm:Cell>
+        <gnm:Cell Row="8" Col="1" ValueType="60">0xFF40.1</gnm:Cell>
+        <gnm:Cell Row="9" Col="1" ValueType="60">0xFF40.0</gnm:Cell>
+        <gnm:Cell Row="10" Col="0" ValueType="60">LCD Status</gnm:Cell>
+        <gnm:Cell Row="10" Col="1" ValueType="60">0xFF41</gnm:Cell>
+        <gnm:Cell Row="10" Col="2" ValueType="60">R/W</gnm:Cell>
+        <gnm:Cell Row="11" Col="1" ValueType="60">0xFF40.7</gnm:Cell>
+        <gnm:Cell Row="11" Col="3" ValueType="60">Unused</gnm:Cell>
+        <gnm:Cell Row="12" Col="1" ValueType="60">0xFF40.6</gnm:Cell>
+        <gnm:Cell Row="13" Col="1" ValueType="60">0xFF40.5</gnm:Cell>
+        <gnm:Cell Row="14" Col="1" ValueType="60">0xFF40.4</gnm:Cell>
+        <gnm:Cell Row="15" Col="1" ValueType="60">0xFF40.3</gnm:Cell>
+        <gnm:Cell Row="16" Col="1" ValueType="60">0xFF40.2</gnm:Cell>
+        <gnm:Cell Row="17" Col="1" ValueType="60">0xFF40.1-0</gnm:Cell>
+        <gnm:Cell Row="17" Col="2" ValueType="60">R</gnm:Cell>
+        <gnm:Cell Row="17" Col="3" ValueType="60">0: During H-Blank</gnm:Cell>
+        <gnm:Cell Row="18" Col="3" ValueType="60">1: During V-Blank</gnm:Cell>
+        <gnm:Cell Row="19" Col="3" ValueType="60">2: During Searching OAM-RAM</gnm:Cell>
+        <gnm:Cell Row="20" Col="3" ValueType="60">3: During Transfering Data to LCD Driver</gnm:Cell>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+  </gnm:Sheets>
+  <gnm:UIData SelectedTab="2"/>
+</gnm:Workbook>
