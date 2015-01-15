@@ -12,12 +12,16 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-Wall" />
 					<Add option="-g" />
 					<Add option="-DGBUNIT" />
 					<Add directory="../../../../gbunit/Unity/src" />
 					<Add directory="../../../../gbunit/realboy-0.2.2/src" />
 					<Add directory="../../../../gbunit" />
 				</Compiler>
+				<ExtraCommands>
+					<Add before="ruby ../../../../gbunit/Unity/auto/generate_test_runner.rb test_background_string.c test_runner.c" />
+				</ExtraCommands>
 			</Target>
 		</Build>
 		<Compiler>
