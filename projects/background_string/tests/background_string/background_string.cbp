@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="background_string" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/background_string" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DGBUNIT" />
+					<Add directory="../../../../gbunit/Unity/src" />
+					<Add directory="../../../../gbunit/realboy-0.2.2/src" />
+					<Add directory="../../../../gbunit" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../../../../gbunit/Unity/src/unity.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../../../gbunit/gbunit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../../../gbunit/gbunit.h" />
+		<Unit filename="../../../../gbunit/realboy-0.2.2/src/gboy_cpu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../../../gbunit/realboy-0.2.2/src/gboy_file.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../../../gbunit/realboy-0.2.2/src/gboy_mbc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../../../gbunit/realboy-0.2.2/src/gboy_mbc1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../../../gbunit/realboy-0.2.2/src/gboy_mbc2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../../../gbunit/realboy-0.2.2/src/gboy_mbc3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../../../gbunit/realboy-0.2.2/src/gboy_mbc5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../../../gbunit/realboy-0.2.2/src/gboy_mem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../../../gbunit/realboy-0.2.2/src/gboy_vm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="func_offsets.h" />
+		<Unit filename="test_background_string.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test_runner.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,11 @@
+Set chg_gam if either a mock fail occurs to bail out early or if a RET
+(or variant) is encountered and stack pointer is greater (lower) or equal
+to where it started when the test call was made.  If stack pointer is
+lower than when the function started stack corruption occurred.
+
+Alternatively, vm keeps track of call stack and when a RET is encountered
+when the call stack is empty (not in a subroutine) set chg_gam.
+
+
+Setting chg_gam should kick out of rom_exec() and start_vm() thus
+thus returning control to GBUnit and tests.

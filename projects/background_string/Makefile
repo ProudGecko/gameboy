@@ -2,9 +2,9 @@ OUTPUT = background_string
 
 # Assembler path and flags
 AS = rgbasm 
-ASFLAGS = -v
+ASFLAGS =
 CC = rgbasm 
-CFLAGS = -v
+CFLAGS =
 
 # Linker path and flags
 LD = rgblink

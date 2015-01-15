@@ -1,0 +1,12 @@
+#define draw 0x0281
+#define stat 0x0282
+#define timer 0x0283
+#define serial 0x0288
+#define joypad 0x0289
+#define WriteVRAM 0x01CC
+#define StringToWrite 0x0150
+#define WriteStringToVRAM 0x01DA
+#define ReadController 0x015D
+#define UpdateSprite 0x0185
+#define Smiley 0x028A
+#define Font 0x029A

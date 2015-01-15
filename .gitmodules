@@ -1,3 +1,6 @@
 [submodule "gbunit/Unity"]
 	path = gbunit/Unity
 	url = https://github.com/ThrowTheSwitch/Unity.git
+[submodule "gbunit/CMock"]
+	path = gbunit/CMock
+	url = https://github.com/ThrowTheSwitch/CMock.git

@@ -1,9 +1,9 @@
 /* RealBoy Emulator: Free, Fast, Yet Accurate, Game Boy/Game Boy Color Emulator.
  * Copyright (C) 2013 Sergio Andrés Gómez del Real
  *
- * This program is free software; you can redistribute it and/or modify  
- * it under the terms of the GNU General Public License as published by   
- * the Free Software Foundation; either version 2 of the License, or    
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -13,7 +13,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. 
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 /* Addresses */
 #define NIN_LOG 0x104 // Nintendo logo starts
@@ -64,7 +64,6 @@ extern void gddb_reset();
 extern FILE *open_save_try(char *);
 extern FILE *create_save(char *);
 extern void rom_exec(int);
-extern void rom_exec(int);
 extern void mbc_init(int);
 extern Uint32 gboy_mode;
 extern Uint8 addr_sp[];
@@ -82,9 +81,11 @@ char *save_name;
 static const char * const gb_boot_strs[] = { "boot_roms/dmg_boot.bin", "boot_roms/gbc_boot.bin" };
 static Uint8 cart_init_rd[336]; // Temporary space for cartridge's header
 static const Uint8 nin_log[] = { 0xce, 0xed, 0x66, 0x66,  0xcc, 0x0d, 0x00, 0x0b, 0x03, 0x73, 0x00, 0x83, 0x00, 0x0c, 0x00, 0x0d, 0x00, 0x08, 0x11, 0x1f,  0x88, 0x89, 0x00, 0x0e, 0xdc, 0xcc, 0x6e, 0xe6, 0xdd, 0xdd, 0xd9, 0x99, 0xbb, 0xbb, 0x67, 0x63,  0x6e, 0x0e, 0xec, 0xcc, 0xdd, 0xdc, 0x99, 0x9f, 0xbb, 0xb9, 0x33, 0x3e }; // Nintendo Game Boy signature
+#ifdef GBUNIT
+#else
 static char *ram_sz_vec[] = { "None", "Ram size 2kb", "Ram size 8kb", "Ram size 32kb" };
 
-static char *rom_sz_vec[] = { "Rom size 32kb", "Rom size 64kb", "Rom size 128kb", 
-						"Rom size 256kb", "Rom size 512kb", "Rom size 1mb", 
+static char *rom_sz_vec[] = { "Rom size 32kb", "Rom size 64kb", "Rom size 128kb",
+						"Rom size 256kb", "Rom size 512kb", "Rom size 1mb",
 						"Rom size 2mb", "Rom size 4mb" };
-
+#endif // GBUNIT
