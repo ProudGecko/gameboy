@@ -1,11 +1,10 @@
 #ifndef _GBUNIT_H_
 #define _GBUNIT_H_
 
+#include <stdint.h>
+#include "gbunit_memory_map.h"
+
 #define RETURN_TO_GBUNIT_INDICATOR (0xFFFF)
-#define TOP_OF_STACK               (0xFF80)
-#define BOTTOM_OF_STACK            (0xFFFE)
-#define STACK_BYTE_SIZE            (BOTTOM_OF_STACK - TOP_OF_STACK)
-#define STACK_WORD_SIZE            (STACK_BYTE_SIZE / 2)
 
 typedef struct
 {
@@ -58,15 +57,17 @@ typedef struct
     } regHL;
     uint16_t regPC;
     uint16_t regSP;
-    uint16_t Stack[STACK_WORD_SIZE];
 } cpu_image_t;
+
+
 
 void PushToGbStack(uint16_t value);
 uint16_t PopFromGbStack();
-void ReadFromGbMemory(uint16_t gb_src, uint8_t * host_dest, int len);
-void WriteToGbMemory(uint8_t * host_src, uint16_t gb_dest, int len);
-cpu_image_t RunROM(uint16_t offset, cpu_image_t cpu_state);
+void ReadFromGbMemory(uint16_t gb_src, void * host_dest, int len);
+void WriteToGbMemory(const void * host_src, uint16_t gb_dest, int len);
+void RunROM(uint16_t offset, cpu_image_t *cpu_state, memory_map_t *mem_state);
 
 void AssertEqual_cpu_image_t(cpu_image_t expected, cpu_image_t actual, unsigned int line, const char *msg);
+void AssertEqual_memory_map_t(memory_map_t expected, memory_map_t actual, uint16_t stack_ptr, unsigned int line, const char *msg);
 
 #endif // _GBUNIT_H_

@@ -88,25 +88,25 @@ uint16_t PopFromGbStack()
 	return val;
 }
 
-void ReadFromGbMemory(uint16_t gb_src, uint8_t * host_dest, int len)
+void ReadFromGbMemory(uint16_t gb_src, void * host_dest, int len)
 {
     int loop_ctr;
 
     for(loop_ctr = 0; loop_ctr < len; loop_ctr++)
     {
         Uint8 *host_addr = (Uint8 *)(addr_sp_ptrs[gb_src >> 12] + gb_src);
-        host_dest[loop_ctr] = mem_rd(gb_src++, host_addr);
+        ((uint8_t *)host_dest)[loop_ctr] = mem_rd(gb_src++, host_addr);
     }
 }
 
-void WriteToGbMemory(uint8_t * host_src, uint16_t gb_dest, int len)
+void WriteToGbMemory(const void * host_src, uint16_t gb_dest, int len)
 {
     int loop_ctr;
 
     for(loop_ctr = 0; loop_ctr < len; loop_ctr++)
     {
         Uint8 *host_addr = (Uint8 *)(addr_sp_ptrs[gb_dest >> 12] + gb_dest);
-        mem_wr(gb_dest++, host_src[loop_ctr], host_addr);
+        mem_wr(gb_dest++, ((uint8_t *)host_src)[loop_ctr], host_addr);
     }
 }
 
@@ -116,23 +116,29 @@ void WriteToGbMemory(uint8_t * host_src, uint16_t gb_dest, int len)
  *
  * Parameters:
  *   offset - The offset into the ROM where execution should start
+ *   *cpu_state - The initial CPU register setup
+ *   *mem_state - The initial memory setup
+ *
+ * Returns:
+ *   via *cpu_state - The final CPU register state
+ *   via *mem_state - The final memory state
  */
-cpu_image_t RunROM(uint16_t offset, cpu_image_t initial_cpu_state)
+void RunROM(uint16_t offset, cpu_image_t *cpu_state, memory_map_t *mem_state)
 {
-    cpu_image_t final_cpu_state;
+    // Setup memory map
+    WriteToGbMemory(mem_state->segments.vram.all       , VRAM_START       , VRAM_SIZE);
+    WriteToGbMemory(mem_state->segments.eram           , ERAM_START       , ERAM_SIZE);
+    WriteToGbMemory(mem_state->segments.iram           , IRAM_START       , IRAM_SIZE);
+    WriteToGbMemory(mem_state->segments.oam.all        , OAM_START        , OAM_SIZE);
+    WriteToGbMemory(mem_state->segments.peripherals.all, PERIPHERALS_START, PERIPHERALS_SIZE);
+    WriteToGbMemory(mem_state->segments.stack          , TOP_OF_STACK     , STACK_SIZE);
 
     // Setup registers
-    regs_sets.regs[AF].UWord = initial_cpu_state.regAF.word;
-    regs_sets.regs[BC].UWord = initial_cpu_state.regBC.word;
-    regs_sets.regs[DE].UWord = initial_cpu_state.regDE.word;
-    regs_sets.regs[HL].UWord = initial_cpu_state.regHL.word;
-
-    // Setup stack
-    for(regs_sets.regs[SP].UWord = BOTTOM_OF_STACK; regs_sets.regs[SP].UWord < initial_cpu_state.regSP; /* PushToGbStack() adjusts stack pointer */)
-    {
-        uint8_t stack_word_idx = (regs_sets.regs[SP].UWord - TOP_OF_STACK) / 2;
-        PushToGbStack(initial_cpu_state.Stack[stack_word_idx]);
-    }
+    regs_sets.regs[AF].UWord = cpu_state->regAF.word;
+    regs_sets.regs[BC].UWord = cpu_state->regBC.word;
+    regs_sets.regs[DE].UWord = cpu_state->regDE.word;
+    regs_sets.regs[HL].UWord = cpu_state->regHL.word;
+    regs_sets.regs[SP].UWord = cpu_state->regSP;
 
     PushToGbStack(RETURN_TO_GBUNIT_INDICATOR);
 
@@ -140,25 +146,25 @@ cpu_image_t RunROM(uint16_t offset, cpu_image_t initial_cpu_state)
 	regs_sets.regs[PC].UWord = offset;
     rom_exec(offset);
 
-    memset(&final_cpu_state, 0, sizeof(final_cpu_state));
-    final_cpu_state.regAF.word = regs_sets.regs[AF].UWord;
-    final_cpu_state.regBC.word = regs_sets.regs[BC].UWord;
-    final_cpu_state.regDE.word = regs_sets.regs[DE].UWord;
-    final_cpu_state.regHL.word = regs_sets.regs[HL].UWord;
+    cpu_state->regAF.word = regs_sets.regs[AF].UWord;
+    cpu_state->regBC.word = regs_sets.regs[BC].UWord;
+    cpu_state->regDE.word = regs_sets.regs[DE].UWord;
+    cpu_state->regHL.word = regs_sets.regs[HL].UWord;
+    cpu_state->regSP      = regs_sets.regs[SP].UWord;
 
-    for(final_cpu_state.regSP = regs_sets.regs[SP].UWord; regs_sets.regs[SP].UWord < BOTTOM_OF_STACK; /* PopFromGbStack() adjusts stack pointer */)
-    {
-        uint8_t stack_word_idx = (regs_sets.regs[SP].UWord - TOP_OF_STACK) / 2;
-        final_cpu_state.Stack[stack_word_idx] = PopFromGbStack();
-    }
-
-    return final_cpu_state;
+    ReadFromGbMemory(VRAM_START       , mem_state->segments.vram.all       , VRAM_SIZE);
+    ReadFromGbMemory(ERAM_START       , mem_state->segments.eram           , ERAM_SIZE);
+    ReadFromGbMemory(IRAM_START       , mem_state->segments.iram           , IRAM_SIZE);
+    ReadFromGbMemory(OAM_START        , mem_state->segments.oam.all        , OAM_SIZE);
+    ReadFromGbMemory(PERIPHERALS_START, mem_state->segments.peripherals.all, PERIPHERALS_SIZE);
+    ReadFromGbMemory(TOP_OF_STACK     , mem_state->segments.stack          , STACK_SIZE);
 }
 
 void AssertEqual_cpu_image_t(cpu_image_t expected, cpu_image_t actual, unsigned int line, const char *msg)
 {
     char err_msg[1024];
-    uint16_t stack_loop_ctr;
+
+    msg = (msg == NULL ? "" : msg);
 
     snprintf(err_msg, sizeof(err_msg), "Register pair AF mismatch. %s", msg);
     UNITY_TEST_ASSERT_EQUAL_HEX16(expected.regAF.word, actual.regAF.word, line, err_msg);
@@ -178,11 +184,30 @@ void AssertEqual_cpu_image_t(cpu_image_t expected, cpu_image_t actual, unsigned 
 
     snprintf(err_msg, sizeof(err_msg), "Stack Pointer mismatch. %s", msg);
     UNITY_TEST_ASSERT_EQUAL_HEX16(expected.regSP, actual.regSP, line, err_msg);
+}
 
-    for(stack_loop_ctr = actual.regSP; stack_loop_ctr < BOTTOM_OF_STACK; stack_loop_ctr += 2)
-    {
-        uint8_t stack_word_idx = (stack_loop_ctr - TOP_OF_STACK) / 2;
-        snprintf(err_msg, sizeof(err_msg), "Stack mismatch @ %d. %s", stack_loop_ctr, msg);
-        UNITY_TEST_ASSERT_EQUAL_HEX16(expected.Stack[stack_word_idx], actual.Stack[stack_word_idx], line, err_msg);
-    }
+void AssertEqual_memory_map_t(memory_map_t expected, memory_map_t actual, uint16_t stack_ptr, unsigned int line, const char *msg)
+{
+    char err_msg[1024];
+    int stack_depth = BOTTOM_OF_STACK - stack_ptr + 1;
+    stack_ptr -= TOP_OF_STACK;
+    msg = (msg == NULL ? "" : msg);
+
+    snprintf(err_msg, sizeof(err_msg), "VRAM mismatch. %s", msg);
+    UNITY_TEST_ASSERT_EQUAL_HEX8_ARRAY(expected.segments.vram.all       , actual.segments.vram.all       , sizeof(actual.segments.vram)       , line, err_msg);
+
+    snprintf(err_msg, sizeof(err_msg), "External RAM mismatch. %s", msg);
+    UNITY_TEST_ASSERT_EQUAL_HEX8_ARRAY(expected.segments.eram           , actual.segments.eram           , sizeof(actual.segments.eram)       , line, err_msg);
+
+    snprintf(err_msg, sizeof(err_msg), "Internal RAM mismatch. %s", msg);
+    UNITY_TEST_ASSERT_EQUAL_HEX8_ARRAY(expected.segments.iram           , actual.segments.iram           , sizeof(actual.segments.iram)       , line, err_msg);
+
+    snprintf(err_msg, sizeof(err_msg), "OAM mismatch. %s", msg);
+    UNITY_TEST_ASSERT_EQUAL_HEX8_ARRAY(expected.segments.oam.all        , actual.segments.oam.all        , sizeof(actual.segments.oam)        , line, err_msg);
+
+    snprintf(err_msg, sizeof(err_msg), "Peripheral register mismatch. %s", msg);
+    UNITY_TEST_ASSERT_EQUAL_HEX8_ARRAY(expected.segments.peripherals.all, actual.segments.peripherals.all, sizeof(actual.segments.peripherals), line, err_msg);
+
+    snprintf(err_msg, sizeof(err_msg), "Stack mismatch. SP = 0x%x. %s", (stack_ptr + TOP_OF_STACK), msg);
+    UNITY_TEST_ASSERT_EQUAL_HEX8_ARRAY(expected.segments.stack + stack_ptr, actual.segments.stack + stack_ptr, stack_depth, line, err_msg);
 }

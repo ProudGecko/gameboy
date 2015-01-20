@@ -26,6 +26,7 @@
 #include "gbunit.h"
 #include "func_offsets.h"
 #include <stdio.h>
+#include <string.h>
 
 //=======External Functions This Runner Calls=====
 extern void setUp(void);
@@ -33,6 +34,7 @@ extern void tearDown(void);
 extern void testWriteVRAM(void);
 extern void testWriteStringToVRAM(void);
 extern void test_cpu_image_assert(void);
+extern void test_memory_map_assert(void);
 extern void test_memory_access_routines(void);
 
 
@@ -49,10 +51,11 @@ void resetTest(void)
 int main(void)
 {
   UnityBegin("test_background_string.c");
-  RUN_TEST(testWriteVRAM, 24);
-  RUN_TEST(testWriteStringToVRAM, 34);
-  RUN_TEST(test_cpu_image_assert, 44);
-  RUN_TEST(test_memory_access_routines, 55);
+  RUN_TEST(testWriteVRAM, 32);
+  RUN_TEST(testWriteStringToVRAM, 38);
+  RUN_TEST(test_cpu_image_assert, 59);
+  RUN_TEST(test_memory_map_assert, 72);
+  RUN_TEST(test_memory_access_routines, 88);
 
   return (UnityEnd());
 }
