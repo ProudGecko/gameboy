@@ -1,7 +1,7 @@
 #ifndef _GBUNIT_MEMORY_MAP_H_
 #define _GBUNIT_MEMORY_MAP_H_
 
-#include <stdint.h>
+#include "gbunit_stdint.h"
 #include <stddef.h>
 #include "compile_time_assert.h"
 
@@ -69,6 +69,13 @@ compile_time_assert(offsetof(memory_map_t, segments.peripherals) == 0xFF00);
 compile_time_assert(offsetof(memory_map_t, segments.stack)       == 0xFF80);
 compile_time_assert(offsetof(memory_map_t, segments.unused2)     == 0xFFFF);
 compile_time_assert(  sizeof(memory_map_t)                       == 0x10000);
+
+typedef struct
+{
+    memory_map_t mem;
+    uint16_t stack_ptr;
+    uint8_t num_stack_items_to_verify;
+} assert_memory_map_t;
 
 #define VRAM_START                 (offsetof(memory_map_t, segments.vram))
 #define VRAM_SIZE                  (offsetof(memory_map_t, segments.eram) - offsetof(memory_map_t, segments.vram))

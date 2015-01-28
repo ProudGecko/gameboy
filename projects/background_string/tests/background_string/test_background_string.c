@@ -6,8 +6,8 @@
 #include <string.h>
 
 FILE *rom_file;
-cpu_image_t actual_state, expected_state;
-memory_map_t actual_mem, expected_mem;
+assert_cpu_image_t actual_state, expected_state;
+assert_memory_map_t actual_mem, expected_mem;
 
 int start_vm();
 void shutdown_vm(void);
@@ -15,10 +15,12 @@ void rom_exec(int);
 
 void setUp(void)
 {
-    memset(&actual_state, 0, sizeof(actual_state));
-    memset(&expected_state, 0, sizeof(expected_state));
-    memset(&actual_mem, 0, sizeof(actual_mem));
-    memset(&expected_mem, 0, sizeof(expected_mem));
+    actual_state = Create_assert_cpu_image_t();
+    expected_state = Create_assert_cpu_image_t();
+
+    actual_mem = Create_assert_memory_map_t();
+    expected_mem = Create_assert_memory_map_t();
+
     rom_file = fopen("/home/schambda/Projects/gameboy/projects/background_string/background_string.gb", "rb");
     TEST_ASSERT_NOT_NULL_MESSAGE(rom_file, "Unable to open ROM file");
     start_vm();
@@ -31,8 +33,8 @@ void tearDown(void)
 
 void testWriteVRAM(void)
 {
-    RunROM(WriteVRAM, &actual_state, &actual_mem);
-    AssertEqual_cpu_image_t(expected_state, actual_state, __LINE__, NULL);
+    RunROM(WriteVRAM, &actual_state.state, &actual_mem.mem);
+    AssertEqual_assert_cpu_image_t(expected_state, actual_state, __LINE__, NULL);
 }
 
 void testWriteStringToVRAM(void)
@@ -41,48 +43,54 @@ void testWriteStringToVRAM(void)
     uint8_t expected_string_len = (uint8_t)strlen(expected_string);
     uint8_t ii;
 
-    actual_state.regDE.word   = StringToWrite;
-    actual_state.regHL.word   = offsetof(memory_map_t, segments.vram.segments.bg_map1);
-    actual_state.regBC.regs.b = expected_string_len;
+    actual_state.state.regDE.word   = StringToWrite;
+    actual_state.state.regHL.word   = offsetof(memory_map_t, segments.vram.segments.bg_map1);
+    actual_state.state.regBC.regs.b = expected_string_len;
 
     for(ii = 0; ii < expected_string_len; ii++)
     {
-        expected_mem.segments.vram.segments.bg_map1[ii] = expected_string[ii] - 0x1F;
+        expected_mem.mem.segments.vram.segments.bg_map1[ii] = expected_string[ii] - 0x1F;
     }
 
-    RunROM(WriteStringToVRAM, &actual_state, &actual_mem);
+    RunROM(WriteStringToVRAM, &actual_state.state, &actual_mem.mem);
 
-    AssertEqual_memory_map_t(expected_mem, actual_mem, BOTTOM_OF_STACK, __LINE__, NULL);
-    //AssertEqual_cpu_image_t(expected_state, actual_state, __LINE__, NULL);
+    AssertEqual_assert_memory_map_t(expected_mem, actual_mem, __LINE__, NULL);
+    AssertEqual_assert_cpu_image_t(expected_state, actual_state, __LINE__, NULL);
 }
 
 void test_cpu_image_assert(void)
 {
+    assert_cpu_image_t assert_expected, assert_actual;
     cpu_image_t expected, actual;
 
     memset(&expected, 0, sizeof(expected));
     memset(&actual  , 0, sizeof(actual));
 
-    expected.regAF.word = 0x1234;
-    actual.regAF.word = 0x3412;
+    assert_expected = Create_assert_cpu_image_t();
+    assert_actual = Create_assert_cpu_image_t();
 
-    AssertEqual_cpu_image_t(expected, actual, __LINE__, NULL);
+    assert_expected.state.regAF.word = 0x1234;
+    assert_expected.assert_A = TRUE;
+
+    assert_actual.state.regAF.word = 0x3412;
+
+    AssertEqual_assert_cpu_image_t(assert_expected, assert_actual, __LINE__, NULL);
 }
 
 void test_memory_map_assert(void)
 {
-    memory_map_t expected, actual;
+    assert_memory_map_t expected, actual;
 
-    memset(&expected, 0, sizeof(expected));
-    memset(&actual  , 0, sizeof(actual));
+    expected = Create_assert_memory_map_t();
+    actual = Create_assert_memory_map_t();
 
-    expected.all[BOTTOM_OF_STACK - 1] = 0x34;
-    expected.all[BOTTOM_OF_STACK - 0] = 0x12;
+    expected.mem.all[BOTTOM_OF_STACK - 1] = 0x34;
+    expected.mem.all[BOTTOM_OF_STACK - 0] = 0x12;
 
-    actual.all[BOTTOM_OF_STACK - 1] = 0x34;
-    actual.all[BOTTOM_OF_STACK - 0] = 0x34;
+    actual.mem.all[BOTTOM_OF_STACK - 1] = 0x34;
+    actual.mem.all[BOTTOM_OF_STACK - 0] = 0x34;
 
-    AssertEqual_memory_map_t(expected, actual, BOTTOM_OF_STACK - 1, __LINE__, NULL);
+    AssertEqual_assert_memory_map_t(expected, actual, __LINE__, NULL);
 }
 
 void test_memory_access_routines(void)

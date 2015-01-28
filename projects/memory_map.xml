@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
-  <gnm:Version Epoch="1" Major="12" Minor="9" Full="1.12.9"/>
+  <gnm:Version Epoch="1" Major="12" Minor="17" Full="1.12.17"/>
   <gnm:Attributes>
     <gnm:Attribute>
       <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
@@ -25,7 +25,7 @@
   </gnm:Attributes>
   <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
     <office:meta>
-      <dc:date>2014-12-15T03:40:00Z</dc:date>
+      <dc:date>2015-01-20T04:36:42Z</dc:date>
       <meta:creation-date>2014-12-10T17:58:30Z</meta:creation-date>
     </office:meta>
   </office:document-meta>
@@ -38,12 +38,12 @@
     <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Internal RAM</gnm:SheetName>
     <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Peripherals</gnm:SheetName>
   </gnm:SheetNameIndex>
-  <gnm:Geometry Width="935" Height="847"/>
+  <gnm:Geometry Width="1440" Height="678"/>
   <gnm:Sheets>
     <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
       <gnm:Name>Summary</gnm:Name>
       <gnm:MaxCol>3</gnm:MaxCol>
-      <gnm:MaxRow>6</gnm:MaxRow>
+      <gnm:MaxRow>7</gnm:MaxRow>
       <gnm:Zoom>1</gnm:Zoom>
       <gnm:Names>
         <gnm:Name>
@@ -101,10 +101,10 @@
         <gnm:ColInfo No="3" Unit="94.5" HardSize="1"/>
       </gnm:Cols>
       <gnm:Rows DefaultSizePts="12.75">
-        <gnm:RowInfo No="0" Unit="13.5" Count="7"/>
+        <gnm:RowInfo No="0" Unit="13.5" Count="8"/>
       </gnm:Rows>
-      <gnm:Selections CursorCol="6" CursorRow="18">
-        <gnm:Selection startCol="6" startRow="18" endCol="6" endRow="18"/>
+      <gnm:Selections CursorCol="3" CursorRow="7">
+        <gnm:Selection startCol="3" startRow="7" endCol="3" endRow="7"/>
       </gnm:Selections>
       <gnm:Cells>
         <gnm:Cell Row="0" Col="0" ValueType="60">Segment</gnm:Cell>
@@ -119,22 +119,26 @@
         <gnm:Cell Row="2" Col="1" ValueType="60">0x8000</gnm:Cell>
         <gnm:Cell Row="2" Col="2" ValueType="60">0x9FFF</gnm:Cell>
         <gnm:Cell Row="2" Col="3" ExprID="1"/>
-        <gnm:Cell Row="3" Col="0" ValueType="60">Internal RAM</gnm:Cell>
-        <gnm:Cell Row="3" Col="1" ValueType="60">0xC000</gnm:Cell>
-        <gnm:Cell Row="3" Col="2" ValueType="60">0xDFFF</gnm:Cell>
+        <gnm:Cell Row="3" Col="0" ValueType="60">External RAM</gnm:Cell>
+        <gnm:Cell Row="3" Col="1" ValueType="60">0xA000</gnm:Cell>
+        <gnm:Cell Row="3" Col="2" ValueType="60">0xBFFF</gnm:Cell>
         <gnm:Cell Row="3" Col="3" ExprID="1"/>
-        <gnm:Cell Row="4" Col="0" ValueType="60">Object Attribute Memory (OAM)</gnm:Cell>
-        <gnm:Cell Row="4" Col="1" ValueType="60">0xFE00</gnm:Cell>
-        <gnm:Cell Row="4" Col="2" ValueType="60">0xFE9F</gnm:Cell>
+        <gnm:Cell Row="4" Col="0" ValueType="60">Internal RAM</gnm:Cell>
+        <gnm:Cell Row="4" Col="1" ValueType="60">0xC000</gnm:Cell>
+        <gnm:Cell Row="4" Col="2" ValueType="60">0xDFFF</gnm:Cell>
         <gnm:Cell Row="4" Col="3" ExprID="1"/>
-        <gnm:Cell Row="5" Col="0" ValueType="60">Peripherals</gnm:Cell>
-        <gnm:Cell Row="5" Col="1" ValueType="60">0xFF00</gnm:Cell>
-        <gnm:Cell Row="5" Col="2" ValueType="60">0xFF7F</gnm:Cell>
+        <gnm:Cell Row="5" Col="0" ValueType="60">Object Attribute Memory (OAM)</gnm:Cell>
+        <gnm:Cell Row="5" Col="1" ValueType="60">0xFE00</gnm:Cell>
+        <gnm:Cell Row="5" Col="2" ValueType="60">0xFE9F</gnm:Cell>
         <gnm:Cell Row="5" Col="3" ExprID="1"/>
-        <gnm:Cell Row="6" Col="0" ValueType="60">Stack</gnm:Cell>
-        <gnm:Cell Row="6" Col="1" ValueType="60">0xFF80</gnm:Cell>
-        <gnm:Cell Row="6" Col="2" ValueType="60">0xFFFE</gnm:Cell>
+        <gnm:Cell Row="6" Col="0" ValueType="60">Peripherals</gnm:Cell>
+        <gnm:Cell Row="6" Col="1" ValueType="60">0xFF00</gnm:Cell>
+        <gnm:Cell Row="6" Col="2" ValueType="60">0xFF7F</gnm:Cell>
         <gnm:Cell Row="6" Col="3" ExprID="1"/>
+        <gnm:Cell Row="7" Col="0" ValueType="60">Stack</gnm:Cell>
+        <gnm:Cell Row="7" Col="1" ValueType="60">0xFF80</gnm:Cell>
+        <gnm:Cell Row="7" Col="2" ValueType="60">0xFFFE</gnm:Cell>
+        <gnm:Cell Row="7" Col="3" ExprID="1"/>
       </gnm:Cells>
       <gnm:SheetLayout TopLeft="A1"/>
       <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
@@ -397,8 +401,8 @@
       <gnm:Rows DefaultSizePts="12.75">
         <gnm:RowInfo No="0" Unit="13.5" Count="5"/>
       </gnm:Rows>
-      <gnm:Selections CursorCol="5" CursorRow="6">
-        <gnm:Selection startCol="5" startRow="6" endCol="5" endRow="6"/>
+      <gnm:Selections CursorCol="0" CursorRow="24">
+        <gnm:Selection startCol="0" startRow="24" endCol="0" endRow="24"/>
       </gnm:Selections>
       <gnm:Cells>
         <gnm:Cell Row="0" Col="0" ValueType="60">Section</gnm:Cell>
@@ -660,5 +664,5 @@
       <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
     </gnm:Sheet>
   </gnm:Sheets>
-  <gnm:UIData SelectedTab="2"/>
+  <gnm:UIData SelectedTab="0"/>
 </gnm:Workbook>
